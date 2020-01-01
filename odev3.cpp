@@ -1,3 +1,4 @@
+// 2017280075  Åiyar Utkan 
 #include <conio.h>
 #include <iostream>
 #include <stdio.h>
@@ -13,9 +14,9 @@
 #include <numeric>
 int main(){
 using namespace std;
-	//Kaç satır olduğunu sayıyoruz.
-    //ilk iki satırdan sonra öğrencilerin sıralanacağını biliyoruz.
-    //satır sayısından iki çıkardığımızda kaç öğrenci olduğunu bulacağız.	
+	//KaÃ§ satÃ½r olduÃ°unu sayÃ½yoruz.
+    //ilk iki satÃ½rdan sonra Ã¶Ã°rencilerin sÃ½ralanacaÃ°Ã½nÃ½ biliyoruz.
+    //satÃ½r sayÃ½sÃ½ndan iki Ã§Ã½kardÃ½Ã°Ã½mÃ½zda kaÃ§ Ã¶Ã°renci olduÃ°unu bulacaÃ°Ã½z.	
 	//https://stackoverflow.com/questions/3482064/counting-the-number-of-lines-in-a-text-file
 	unsigned int satirSayisi = 0;
 	int soruSayisi;
@@ -34,7 +35,7 @@ std::cout<<"Ogrenci Sayisi:"<<std::endl;
 std::cout<<ogrenciSayisi<<std::endl;
 
 
-//Soru sayısını buluyorum.
+//Soru sayÃ½sÃ½nÃ½ buluyorum.
 ifstream oku3("input.txt");
 	int satir;
 		oku3>>soruSayisi;
@@ -42,7 +43,7 @@ oku3.close();
 cout<<"Soru Sayisi:"<<std::endl;
 cout<<soruSayisi<<std::endl;
 	
-	//ÖNEMLİ!!! input.txt dosyasında boş bırakılmış sorular için "b" yazıldığı varsayılmıştır. "A,b,B" gibi.
+	//Ã–NEMLÃ!!! input.txt dosyasÃ½nda boÃ¾ bÃ½rakÃ½lmÃ½Ã¾ sorular iÃ§in "b" yazÃ½ldÃ½Ã°Ã½ varsayÃ½lmÃ½Ã¾tÃ½r. "A,b,B" gibi.
 
 vector <string> v;
 vector <string> d;
@@ -75,11 +76,11 @@ cout<<"Cevap Anahtari:"<<endl;
 cout<<v[1]<<endl;
 
   
-//ogrenci numaralari için ve cevaplari için iki vektör tanımladım
+//ogrenci numaralari iÃ§in ve cevaplari iÃ§in iki vektÃ¶r tanÃ½mladÃ½m
 vector <string> n;
 vector <string> o;
 
-//yeni dosya oluşturup verinin bir kısmını oraya atma fikrini edindiğim yer:
+//yeni dosya oluÃ¾turup verinin bir kÃ½smÃ½nÃ½ oraya atma fikrini edindiÃ°im yer:
 //https://stackoverflow.com/questions/25076739/how-to-delete-a-specific-row-in-a-text-file-using-fstream/43983581
 ifstream oku2("ogrenciCevaplari.txt");
 string ogrenciNumarasi,ogrenciCevap;
@@ -91,7 +92,7 @@ while(getline(oku2, linee)){
 	n.push_back(ogrenciNumarasi);
 	o.push_back(ogrenciCevap);	
 }
-//stringstream için: https://youtu.be/_IzYGiuX8QM?list=WL
+//stringstream iÃ§in: https://youtu.be/_IzYGiuX8QM?list=WL
 oku2.close();  
 cout<<"Ogrenci Numaralari ve Cevaplari:"<<endl;
   for(int x=0;x<ogrenciSayisi;x++){
@@ -145,10 +146,10 @@ else{
 }
 cout<<"Puan:"<<endl;
 cout<<puan<<endl;
-//puanları vektörümüze aktarıyoruz.
+//puanlarÃ½ vektÃ¶rÃ¼mÃ¼ze aktarÃ½yoruz.
 puanlar.push_back(puan);
 
-//her döngü tur attığında valueları sıfırlamak için koyduğum operator işlemi.
+//her dÃ¶ngÃ¼ tur attÃ½Ã°Ã½nda valuelarÃ½ sÃ½fÃ½rlamak iÃ§in koyduÃ°um operator iÃ¾lemi.
 dogruSayisi -= dogruSayisi;
 bosSayisi -= bosSayisi;
 b_yanlisSayisi -= b_yanlisSayisi;
@@ -161,7 +162,7 @@ for(int c;c<ogrenciSayisi; c++){
 cout<<puanlar[c]<<endl;
 }
 sort(puanlar.begin(), puanlar.end()); 
-//sorting işlemi için:https://www.geeksforgeeks.org/sorting-a-vector-in-c/
+//sorting iÃ¾lemi iÃ§in:https://www.geeksforgeeks.org/sorting-a-vector-in-c/
 for(int c;c<ogrenciSayisi; c++){
 output<<n[c]<<":";
 output<<puanlar[c]<<endl;
