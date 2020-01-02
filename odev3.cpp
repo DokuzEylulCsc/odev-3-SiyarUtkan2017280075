@@ -1,4 +1,4 @@
-// 2017280075  Şiyar Utkan
+// 2017280075  Åiyar Utkan
 #include <conio.h>
 #include <iostream>
 #include <stdio.h>
@@ -14,9 +14,9 @@
 #include <numeric>
 int main(){
 using namespace std;
-	//Kaç satır olduğunu sayıyoruz.
-    //ilk iki satırdan sonra öğrencilerin sıralanacağını biliyoruz.
-    //satır sayısından iki çıkardığımızda kaç öğrenci olduğunu bulacağız.	
+	//KaÃ§ satÄ±r olduÄŸunu sayÄ±yoruz.
+    //ilk iki satÄ±rdan sonra Ã¶ÄŸrencilerin sÄ±ralanacaÄŸÄ±nÄ± biliyoruz.
+    //satÄ±r sayÄ±sÄ±ndan iki Ã§Ä±kardÄ±ÄŸÄ±mÄ±zda kaÃ§ Ã¶ÄŸrenci olduÄŸunu bulacaÄŸÄ±z.	
 	//https://stackoverflow.com/questions/3482064/counting-the-number-of-lines-in-a-text-file
 	unsigned int satirSayisi = 0;
 	int soruSayisi;
@@ -35,7 +35,7 @@ std::cout<<"Ogrenci Sayisi:"<<std::endl;
 std::cout<<ogrenciSayisi<<std::endl;
 
 
-//Soru sayısını buluyorum.
+//Soru sayÄ±sÄ±nÄ± buluyorum.
 ifstream oku3("input.txt");
 	int satir;
 		oku3>>soruSayisi;
@@ -43,7 +43,7 @@ oku3.close();
 cout<<"Soru Sayisi:"<<std::endl;
 cout<<soruSayisi<<std::endl;
 	
-	//ÖNEMLİ!!! input.txt dosyasında boş bırakılmış sorular için "b" yazıldığı varsayılmıştır. "A,b,B" gibi.
+	//Ã–NEMLÄ°!!! input.txt dosyasÄ±nda boÅŸ bÄ±rakÄ±lmÄ±ÅŸ sorular iÃ§in "b" yazÄ±ldÄ±ÄŸÄ± varsayÄ±lmÄ±ÅŸtÄ±r. "A,b,B" gibi.
 
 vector <string> v;
 vector <string> d;
@@ -76,11 +76,11 @@ cout<<"Cevap Anahtari:"<<endl;
 cout<<v[1]<<endl;
 
   
-//ogrenci numaralari için ve cevaplari için iki vektör tanımladım
+//ogrenci numaralari iÃ§in ve cevaplari iÃ§in iki vektÃ¶r tanÄ±mladÄ±m
 vector <string> n;
 vector <string> o;
 
-//yeni dosya oluşturup verinin bir kısmını oraya atma fikrini edindiğim yer:
+//yeni dosya oluÅŸturup verinin bir kÄ±smÄ±nÄ± oraya atma fikrini edindiÄŸim yer:
 //https://stackoverflow.com/questions/25076739/how-to-delete-a-specific-row-in-a-text-file-using-fstream/43983581
 ifstream oku2("ogrenciCevaplari.txt");
 string ogrenciNumarasi,ogrenciCevap;
@@ -92,7 +92,7 @@ while(getline(oku2, linee)){
 	n.push_back(ogrenciNumarasi);
 	o.push_back(ogrenciCevap);	
 }
-//stringstream için: https://youtu.be/_IzYGiuX8QM?list=WL
+//stringstream iÃ§in: https://youtu.be/_IzYGiuX8QM?list=WL
 oku2.close();  
 cout<<"Ogrenci Numaralari ve Cevaplari:"<<endl;
   for(int x=0;x<ogrenciSayisi;x++){
@@ -146,10 +146,10 @@ else{
 }
 cout<<"Puan:"<<endl;
 cout<<puan<<endl;
-//puanları vektörümüze aktarıyoruz.
+//puanlarÄ± vektÃ¶rÃ¼mÃ¼ze aktarÄ±yoruz.
 puanlar.push_back(puan);
 
-//her döngü tur attığında valueları sıfırlamak için koyduğum operator işlemi.
+//her dÃ¶ngÃ¼ tur attÄ±ÄŸÄ±nda valuelarÄ± sÄ±fÄ±rlamak iÃ§in koyduÄŸum operator iÅŸlemi.
 dogruSayisi -= dogruSayisi;
 bosSayisi -= bosSayisi;
 b_yanlisSayisi -= b_yanlisSayisi;
@@ -162,7 +162,7 @@ for(int c;c<ogrenciSayisi; c++){
 cout<<puanlar[c]<<endl;
 }
 sort(puanlar.begin(), puanlar.end()); 
-//sorting işlemi için:https://www.geeksforgeeks.org/sorting-a-vector-in-c/
+//sorting iÅŸlemi iÃ§in:https://www.geeksforgeeks.org/sorting-a-vector-in-c/
 for(int c;c<ogrenciSayisi; c++){
 output<<n[c]<<":";
 output<<puanlar[c]<<endl;
@@ -181,7 +181,7 @@ output<<puanlar[c]<<endl;
         const double range = puanlar.back() - puanlar.front() ;
         std::cout << "Aciklik: " << range << '\n' ;
         output<<"En dusuk not:"<<puanlar.front()<<","<<"En yuksek not:"<<puanlar.back()<<endl;
-        output<<"Ortalama:"<<sum/puanlar.size()<<","<<"Medyan:"<<median;
+        output<<"Ortalama:"<<sum/puanlar.size()<<","<<"Medyan:"<<median<<","<<"Aciklik:"<<range;
         
 output.close();
 getch();
@@ -189,6 +189,5 @@ return 0;
 
 
 }
-
 
 
