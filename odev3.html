@@ -181,7 +181,7 @@ output<<puanlar[c]<<endl;
         const double range = puanlar.back() - puanlar.front() ;
         std::cout << "Aciklik: " << range << '\n' ;
         output<<"En dusuk not:"<<puanlar.front()<<","<<"En yuksek not:"<<puanlar.back()<<endl;
-        output<<"Ortalama:"<<sum/puanlar.size()<<","<<"Medyan:"<<median;
+        output<<"Ortalama:"<<sum/puanlar.size()<<","<<"Medyan:"<<median<<","<<"Aciklik:"<<range;
         
 output.close();
 getch();
